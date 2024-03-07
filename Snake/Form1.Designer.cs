@@ -45,9 +45,11 @@
             // Snake
             // 
             this.Snake.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Snake.Location = new System.Drawing.Point(774, 194);
+            this.Snake.Image = global::Snake.Properties.Resources.Snake__Head_;
+            this.Snake.Location = new System.Drawing.Point(599, 186);
             this.Snake.Name = "Snake";
             this.Snake.Size = new System.Drawing.Size(94, 89);
+            this.Snake.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Snake.TabIndex = 0;
             this.Snake.TabStop = false;
             // 

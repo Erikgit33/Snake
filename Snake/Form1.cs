@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Snake.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -99,7 +100,7 @@ namespace Snake
                 label1.Text = "Points: " + points.ToString();
                 timer1.Interval = 100 - points / 2;
             }
-        
+
             if (Snake.Bounds.Location.X < -25)
             {
                 Snake.Left = 700;
@@ -108,12 +109,20 @@ namespace Snake
             {
                 Snake.Left = -25;
             }
-          
-            //If (bool...)
+
+            if (Snake.Bounds.Location.Y < -20)
+            {
+                Snake.Top = 530;
+            }
+            if (Snake.Bounds.Location.Y > 530)
+            {
+                Snake.Top = 25;
+            }
         }
         void addTail()
         {
             PictureBox tailpiece = new PictureBox();
+            tailpiece.Image = Resources.Snake_tailpiece;
             tailpiece.Location = Snake.Location;
             tailpiece.Size = Snake.Size;
             tailpiece.BackColor = Snake.BackColor;
